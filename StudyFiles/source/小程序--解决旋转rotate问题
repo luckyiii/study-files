@@ -1,0 +1,10 @@
+记录一下我使用小程序旋转rotate踩到的坑，方便下次使用。
+在项目中直接使用transform:rotate(度数);却不能旋转，使用以下代码就成功旋转了，后续把下面那些去掉竟然也没有问题。是小程序自己突然悟了吗？
+
+
+transform:rotate(45deg);
+-ms-transform:rotate(45deg); 
+-moz-transform:rotate(45deg); /* Firefox */
+-webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+-o-transform:rotate(45deg); /* Opera */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
